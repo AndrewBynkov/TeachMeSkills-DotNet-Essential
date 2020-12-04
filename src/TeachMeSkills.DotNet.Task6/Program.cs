@@ -6,7 +6,13 @@ namespace TeachMeSkills.DotNet.Task6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var employer1 = new Employee("Andrew", "Bynkov");
+            var employer2 = new Employee("Kristina", "Mikulich");
+            var employer3 = new Employee("Roman", "Hisak");
+
+            employer1.GetSalaryAndEmployerInfo();
+            employer2.GetSalaryAndEmployerInfo();
+            employer3.GetSalaryAndEmployerInfo();
         }
     }
 }
