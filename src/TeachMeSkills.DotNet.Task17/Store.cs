@@ -47,7 +47,9 @@ namespace TeachMeSkills.DotNet.Task17
             Console.WriteLine("Enter name product: ");
             var inputName = Console.ReadLine();
 
-            
+            article.Select(x => x.GetInfoNameProduct(article, inputName));
+
+
         }
     }
 }

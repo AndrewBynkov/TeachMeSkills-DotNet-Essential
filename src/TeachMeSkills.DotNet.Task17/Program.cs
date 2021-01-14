@@ -9,6 +9,7 @@ namespace TeachMeSkills.DotNet.Task17
             var store = new Store();
             store.AddProducts();
             store.GetInfo();
+            
         }
     }
 }

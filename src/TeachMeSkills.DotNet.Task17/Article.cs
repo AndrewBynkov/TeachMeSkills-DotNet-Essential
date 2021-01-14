@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace TeachMeSkills.DotNet.Task17
 {
@@ -26,14 +28,9 @@ namespace TeachMeSkills.DotNet.Task17
             Console.WriteLine($"Product price: {_productPrice}");
         }
 
-        public void GetInfoNameproduct(string name)
+        public List<Article> GetInfoNameProduct(Article[] article, string nameOfProduct)
         {
-            if (_productName == name)
-            {
-                Console.WriteLine($"Product name: {_productName}");
-                Console.WriteLine($"Shop name: {_shopName}");
-                Console.WriteLine($"Product price: {_productPrice}");
-            }
+            return article.Where(x => x._productName == nameOfProduct).ToList();
         }
     }
 }
