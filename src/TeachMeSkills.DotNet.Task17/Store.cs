@@ -47,9 +47,18 @@ namespace TeachMeSkills.DotNet.Task17
             Console.WriteLine("Enter name product: ");
             var inputName = Console.ReadLine();
 
-            article.Select(x => x.GetInfoNameProduct(article, inputName));
-
-
+            foreach (var item in article)
+            {
+                if (item.GetNameProduct().ToLower() == inputName.ToLower())
+                {
+                    item.GetInfoProduct();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Object is not found");
+                }
+            }
         }
     }
 }

@@ -23,14 +23,11 @@ namespace TeachMeSkills.DotNet.Task17
 
         public void GetInfoProduct()
         {
-            Console.WriteLine($"Product name: {_productName}");
+            Console.WriteLine($"\nProduct name: {_productName}");
             Console.WriteLine($"Shop name: {_shopName}");
             Console.WriteLine($"Product price: {_productPrice}");
         }
 
-        public List<Article> GetInfoNameProduct(Article[] article, string nameOfProduct)
-        {
-            return article.Where(x => x._productName == nameOfProduct).ToList();
-        }
+        public string GetNameProduct() => _productName;
     }
 }
